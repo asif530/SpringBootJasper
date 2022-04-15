@@ -1,0 +1,35 @@
+Source code
+http://learningprogramming.net/java/spring-mvc/jasper-report-in-spring-mvc-framework-and-spring-data-jpa/
+
+maven-build-failing-to-download-com-lowagieitextjar2-1-7-js6-dependency
+https://stackoverflow.com/questions/67579217/maven-build-failing-to-download-com-lowagieitextjar2-1-7-js6-dependency
+In the provided repo the jar was not there.so following dependency was added explicitly
+<dependency>
+  <groupId>com.lowagie</groupId>
+  <artifactId>itext</artifactId>
+  <version>4.2.0</version>
+</dependency>
+
+https://www.tutorialspoint.com/difference-between-crudrepository-and-jparepository-in-java
+
+Crud repository was not importing with example pom
+So <version>1.1.7.RELEASE</version> was used
+
+
+Spring Boot - can't start with embedded tomcat error
+Could not initialize class org.springframework.http.converter.json.MappingJackson2HttpMessageConverter springboot
+ClassNotFoundException: org.springframework.http.converter.json.MappingJacksonHttpMessageConverter
+Both of this was solved using below dependency
+                        <dependency>
+                               <groupId>org.springframework</groupId>
+                                <artifactId>spring-web</artifactId>
+                         </dependency>
+Later adding this also worked
+                <dependency>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-annotations</artifactId>
+                            <version>2.9.0</version>
+                        </dependency>
+
+
+
