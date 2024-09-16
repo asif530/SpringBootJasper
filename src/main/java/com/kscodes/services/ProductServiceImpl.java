@@ -14,9 +14,11 @@ import java.util.Map;
 @Service("productService")
 public class ProductServiceImpl implements ProductService{
 
-
-    @Autowired
     private ProductRepository productRepository;
+
+    public ProductServiceImpl(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     @Override
     public List<Map<String, Object>> report() {
